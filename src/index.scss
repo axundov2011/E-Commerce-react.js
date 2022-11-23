@@ -11,10 +11,11 @@ body {
 }
 
 .wrapper {
+  background: #ffffff;
   position: absolute;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-  background: #ffffff;
   border-radius: 20px;
+  left: 400px;
   max-width: 1080px;
   margin: 50px auto;
 }
@@ -70,9 +71,20 @@ header {
 
 
 .search-block {
-  border-bottom: 1px solid #f3f3f3;
+  border: 1px solid #f3f3f3;
   border-radius: 10px;
   padding: 0 15px;
+  position: relative;
+
+  .clear {
+    position: absolute;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    top: 14px;
+    right: 15px;
+  }
+
   input {
     border: 0;
     padding: 13px;
@@ -91,9 +103,10 @@ header {
   z-index: 1;
 }
 .drawer {
+ 
+  position: absolute;
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 420px;
   height: 100%;
   right: 0;
@@ -103,6 +116,11 @@ header {
   transform: translateX(100%);
   transition: transform 0.3s ease-out;
 
+  .items{
+    flex: 1;
+    overflow: auto;
+    margin-bottom: 40px;
+  }
   h2 {
     margin: 0;
   }
@@ -141,7 +159,7 @@ img {
   position: absolute;
   right: 30;
   top: 20px;
-  transform: transform 0.2s ease-in-out;
+  transform: transform 0.15s ease-in-out;
 }
 
   }
